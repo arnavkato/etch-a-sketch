@@ -5,10 +5,15 @@
     width: 800px;
 }
 
-.container div {
+.gridPiece {
     border: 1px solid black;
 }
 
 .row {
     display: flex;
+}
+
+
+.gridPiece:hover {
+    background-color: black;
 }

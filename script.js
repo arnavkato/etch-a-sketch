@@ -11,6 +11,7 @@ function createGrid(units) {
         row.className = "row";
         for(let k = 0; k < units; k++) {
             let gridItem = document.createElement("div");
+            gridItem.className = "gridPiece";
             gridItem.style.width = GRID_SIZE + "px";
             gridItem.style.height = GRID_SIZE + "px";
 
