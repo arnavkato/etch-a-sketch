@@ -14,6 +14,9 @@ function createGrid(units) {
             gridItem.className = "gridPiece";
             gridItem.style.width = GRID_SIZE + "px";
             gridItem.style.height = GRID_SIZE + "px";
+            gridItem.addEventListener("mouseover", () => {
+                gridItem.style.backgroundColor = "black";
+            });
 
             row.appendChild(gridItem);
         }

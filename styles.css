@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -11,9 +17,4 @@
 
 .row {
     display: flex;
-}
-
-
-.gridPiece:hover {
-    background-color: black;
 }
