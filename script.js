@@ -1,22 +1,22 @@
 const container = document.querySelector(".container");
 
-container.style.border = "none";
-container.style.display = "flex";
-
 createGrid(16);
 
 function createGrid(units) {
-    let grid = [];
+    let GRID_SIZE = container.clientWidth / units;
     let row;
 
     for(let i = 0; i < units; i++) {
         row = document.createElement("div");
-        row.style.border = "none";
+        row.className = "row";
         for(let k = 0; k < units; k++) {
-            row.appendChild(document.createElement("div"));
+            let gridItem = document.createElement("div");
+            gridItem.style.width = GRID_SIZE + "px";
+            gridItem.style.height = GRID_SIZE + "px";
+
+            row.appendChild(gridItem);
         }
         container.appendChild(row);
-        grid.push(row);
     }
-    console.log(grid);
+    
 }

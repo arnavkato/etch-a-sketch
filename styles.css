@@ -1,5 +1,14 @@
-div {
-    border: solid;
-    height: 100px;
-    width: 100px;
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 800px;
+}
+
+.container div {
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
 }
