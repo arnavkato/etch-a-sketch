@@ -1,8 +1,13 @@
 const container = document.querySelector(".container");
+const body = document.querySelector("body");
+const button = document.createElement("button");
 
-createGrid(16);
+body.appendChild(button);
 
 function createGrid(units) {
+    if (units > 99) {
+        return;
+    }
     let GRID_SIZE = container.clientWidth / units;
     let row;
 
@@ -24,3 +29,12 @@ function createGrid(units) {
     }
     
 }
+
+
+
+button.addEventListener("click", () => {
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
+    }
+    createGrid(prompt("How many squares per side?"));
+});
